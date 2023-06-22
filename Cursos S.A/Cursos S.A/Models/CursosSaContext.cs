@@ -42,12 +42,12 @@ public partial class CursosSaContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("nombre");
 
-            entity.HasOne(d => d.IdEstudianteNavigation).WithMany(p => p.Cursos)
+            entity.HasOne(d => d.oEstudiante).WithMany(p => p.Cursos)
                 .HasForeignKey(d => d.IdEstudiante)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__cursos__id_estud__3B75D760");
 
-            entity.HasOne(d => d.IdProfesorNavigation).WithMany(p => p.Cursos)
+            entity.HasOne(d => d.oProfesor).WithMany(p => p.Cursos)
                 .HasForeignKey(d => d.IdProfesor)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__cursos__id_profe__3C69FB99");

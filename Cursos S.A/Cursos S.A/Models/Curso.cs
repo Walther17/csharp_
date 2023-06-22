@@ -13,7 +13,7 @@ public partial class Curso
 
     public int IdProfesor { get; set; }
 
-    public virtual Estudiante IdEstudianteNavigation { get; set; } = null!;
+    public virtual Estudiante oEstudiante { get; set; } = null!;
 
-    public virtual Profesor IdProfesorNavigation { get; set; } = null!;
+    public virtual Profesor oProfesor { get; set; } = null!;
 }
