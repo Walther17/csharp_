@@ -1,4 +1,5 @@
-﻿using SistemaDeNotas.Model;
+﻿using SistemaDeNotas.Learning;
+using SistemaDeNotas.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace SistemaDeNotas
              
             Sistema s = new Sistema();
             s.sistemaDeNotas();
+             FuncionesAnonimas  f = new FuncionesAnonimas();
+           // f.ExpresionLambda();
+
+            LinQ linQ = new LinQ();
+           // linQ.funciones();
         }
     }
 }

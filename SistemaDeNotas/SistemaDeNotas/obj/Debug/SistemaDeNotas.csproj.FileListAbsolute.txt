@@ -6,3 +6,11 @@ C:\Users\desarrollo\Documents\Walther Olivo\C##\SistemaDeNotas\SistemaDeNotas\ob
 C:\Users\desarrollo\Documents\Walther Olivo\C##\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.CoreCompileInputs.cache
 C:\Users\desarrollo\Documents\Walther Olivo\C##\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.exe
 C:\Users\desarrollo\Documents\Walther Olivo\C##\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.pdb
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\bin\Debug\SistemaDeNotas.exe.config
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\bin\Debug\SistemaDeNotas.exe
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\bin\Debug\SistemaDeNotas.pdb
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.AssemblyReference.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.CoreCompileInputs.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.exe
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.pdb
