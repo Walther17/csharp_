@@ -85,7 +85,7 @@ namespace safeprojectname.Controllers
 
                 // Validaciones de parámetros de entrada
                 query.IsValid();
-
+                 
                 // Ejecución de la operación de datos
                 var ejemplos = new PagedCollection<Ejemplo>(null, 0, 0);
                 await Task.Factory.StartNew(() =>

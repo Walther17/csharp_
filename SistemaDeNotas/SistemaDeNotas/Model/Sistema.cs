@@ -12,6 +12,8 @@ namespace SistemaDeNotas.Model
         static SqlCommand sqlCommand = new SqlCommand();
         static SqlDataReader sqlDataReader = null;
 
+        List<Nota> notas = new List<Nota>();
+        List<Materia > categorias = new List<Materia>();
 
         public void sistemaDeNotas()
         {
@@ -87,6 +89,34 @@ namespace SistemaDeNotas.Model
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        public void ClasificarNotasPorCategoria()
+        {
+            var notasPorCategoria = notas
+                .GroupBy(nota => nota.Materia)
+                .Select(group => new
+                {
+                    Categoria = group.Key,
+                    Notas = group.ToList()
+                });
+
+            Console.WriteLine("************ Clasificación de Notas por Categoría ************");
+
+            foreach (var categoria in notasPorCategoria)
+            {
+                Console.WriteLine($"Categoría: {categoria.Categoria}");
+                Console.WriteLine("Notas id\t Nota\t Materia");
+                Console.WriteLine("----------------------------------");
+
+                foreach (var nota in categoria.Notas)
+                {
+                    Console.WriteLine($"{nota.Id}\t {nota.Valor}\t {nota.Materia}");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
 
         public void AddNota()
         {

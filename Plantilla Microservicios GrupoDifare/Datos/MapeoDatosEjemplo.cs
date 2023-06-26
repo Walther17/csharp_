@@ -65,22 +65,49 @@ namespace safeprojectname.Datos
 
         #region Métodos de consulta de la clase
 
+        /**    private Ejemplo ObtenerEjemplo(int idEjemplo) 
+            {
+                // Se establecen los parámetros del procedimiento a ejecutar
+                SqlServer.AddParameter("@i_accion", SqlDbType.Char, "C");
+                SqlServer.AddParameter("@i_id_ejemplo", SqlDbType.Int, idEjemplo);
+
+                
+                // Se realiza la consulta a la base de datos
+                var dataSet = SqlServer.ExecuteProcedure(StringHandler.ProcedureExample);
+
+                if (dataSet.Tables.Count == 0) return null;
+                if (dataSet.Tables[0].Rows.Count == 0) return null;
+
+                var ejemplo = ConvertTo<Ejemplo>(dataSet.Tables[0]);
+
+                // Se devuelve el objeto
+                return ejemplo;
+            }
+        **/
+
         private Ejemplo ObtenerEjemplo(int idEjemplo)
         {
-            // Se establecen los parámetros del procedimiento a ejecutar
-            SqlServer.AddParameter("@i_accion", SqlDbType.Char, "C");
-            SqlServer.AddParameter("@i_id_ejemplo", SqlDbType.Int, idEjemplo);
+            try
+            {
+                // Se establecen los parámetros del procedimiento a ejecutar
+                SqlServer.AddParameter("@i_accion", SqlDbType.Char, "C");
+                SqlServer.AddParameter("@i_id_ejemplo", SqlDbType.Int, idEjemplo);
 
-            // Se realiza la consulta a la base de datos
-            var dataSet = SqlServer.ExecuteProcedure(StringHandler.ProcedureExample);
+                // Se realiza la consulta a la base de datos
+                var dataSet = SqlServer.ExecuteProcedure(StringHandler.ProcedureExample);
 
-            if (dataSet.Tables.Count == 0) return null;
-            if (dataSet.Tables[0].Rows.Count == 0) return null;
+             if (dataSet.Tables.Count == 0) return null;
+                if (dataSet.Tables[0].Rows.Count == 0) return null;
 
-            var ejemplo = ConvertTo<Ejemplo>(dataSet.Tables[0]);
+                var ejemplo = ConvertTo<Ejemplo>(dataSet.Tables[0]);
 
-            // Se devuelve el objeto
-            return ejemplo;
+                return ejemplo;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocurrió un error al obtener el ejemplo: " + ex.Message);
+                return null;
+            }
         }
 
         private PagedCollection<Ejemplo> ObtenerListadoEjemplos(ListarEjemplosQuery query)
