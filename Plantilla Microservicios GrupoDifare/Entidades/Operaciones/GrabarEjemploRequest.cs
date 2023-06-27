@@ -16,11 +16,11 @@ namespace safeprojectname.Entidades.Operaciones
 
         public override void IsValid()
         {
-            if (IdEjemplo <= 0)
+        /*    if (IdEjemplo <= 0)
             {
                 throw new RequestException(MensajesEjemplos.CODE_ERROR_VAL_01, MensajesEjemplos.ERROR_VAL_01);
             }
-
+        */
             if (string.IsNullOrWhiteSpace(CampoRequerimiento))
             {
                 throw new RequestException(MensajesEjemplos.CODE_ERROR_VAL_01, MensajesEjemplos.ERROR_VAL_01);

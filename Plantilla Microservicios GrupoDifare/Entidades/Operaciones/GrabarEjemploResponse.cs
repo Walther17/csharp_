@@ -10,6 +10,9 @@ namespace safeprojectname.Entidades.Operaciones
         [JsonPropertyName("idEjemplo")]
         public int IdEjemplo { get; set; }
 
+        [JsonPropertyName("campoRequerimiento")]
+        public string CampoRequerimiento { get; set; }
+
         internal GrabarEjemploResponse()
             : base(true, ApiCodes.CODE_ERROR_API_00, ApiCodes.ERROR_API_00) { }
 

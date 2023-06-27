@@ -18,7 +18,6 @@ namespace safeprojectname.Controllers
         #region Miembros privados del controlador
 
         private readonly IMapeoDatosEjemplo mapeoDatosEjemplo;
-
         #endregion
 
         #region Constructores del controlador
@@ -119,13 +118,20 @@ namespace safeprojectname.Controllers
                 request.IsValid();
 
                 // Ejecución de la operación de datos
-                var response = new GrabarEjemploResponse();
+          var response = new GrabarEjemploResponse();
+      /*               response = await Task.Factory.StartNew(() =>
+                        {
+                            return mapeoDatosEjemplo.Grabar(request);
+                        });
+                 */
                 await Task.Factory.StartNew(() =>
                 {
-                    response = mapeoDatosEjemplo.Grabar(request);
+                    response = mapeoDatosEjemplo.Grabar2(request);
                 });
 
-                return Created(string.Empty, response);
+                
+
+                return response;
             }
             catch (Exception e)
             {
