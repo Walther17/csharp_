@@ -1,18 +1,21 @@
-﻿using safeprojectname.Utils;
-using GDifare.Utilitario.Comun;
+﻿using GDifare.Utilitario.Comun;
 using GDifare.Utilitario.Comun.Exceptions;
+using safeprojectname.Utils;
 using System.Text.Json.Serialization;
 
-namespace safeprojectname.Entidades.Consultas
+namespace safeprojectname.Entidades.ConsultasPersona
 {
-    public class ListarEjemplosQuery : PagedViewRequest
+    public class ConsultarPersonaQuery : DifareBaseRequest
     {
-        [JsonPropertyName("campoConsulta")]
-        public string CampoConsulta { get; set; }
+
+        [JsonPropertyName("id")]
+        public int id { get; set; }
+
+
 
         public override void IsValid()
         {
-            if (string.IsNullOrWhiteSpace(CampoConsulta))
+            if (id <= 0)
             {
                 throw new RequestException(MensajesEjemplos.CODE_ERROR_VAL_01, MensajesEjemplos.ERROR_VAL_01);
             }

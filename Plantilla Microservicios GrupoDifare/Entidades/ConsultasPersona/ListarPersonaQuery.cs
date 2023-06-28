@@ -1,12 +1,13 @@
-﻿using safeprojectname.Utils;
-using GDifare.Utilitario.Comun;
+﻿using GDifare.Utilitario.Comun;
 using GDifare.Utilitario.Comun.Exceptions;
+using safeprojectname.Utils;
 using System.Text.Json.Serialization;
 
-namespace safeprojectname.Entidades.Consultas
+namespace safeprojectname.Entidades.ConsultasPersona
 {
-    public class ListarEjemplosQuery : PagedViewRequest
+    public class ListarPersonaQuery : PagedViewRequest
     {
+
         [JsonPropertyName("campoConsulta")]
         public string CampoConsulta { get; set; }
 

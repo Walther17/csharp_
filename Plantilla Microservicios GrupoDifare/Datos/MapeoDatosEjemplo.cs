@@ -5,10 +5,7 @@ using GDifare.Utilitario.BaseDatos;
 using GDifare.Utilitario.Comun;
 using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.Text.Json;
-using System.Collections.Generic;
-using Newtonsoft.Json;
+
 
 namespace safeprojectname.Datos
 {

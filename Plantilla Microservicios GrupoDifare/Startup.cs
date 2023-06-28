@@ -35,6 +35,7 @@ namespace safeprojectname
 
             // Configuración de implementaciones de interfaces
             services.AddTransient<IMapeoDatosEjemplo, MapeoDatosEjemplo>();
+            services.AddTransient<IMapeoDatosPersona, MapeoDatosPersona>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

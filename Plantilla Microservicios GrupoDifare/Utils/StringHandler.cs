@@ -8,5 +8,7 @@
 
         // Nombres de procedimientos
         internal const string ProcedureExample = "pr_ejemplo";
+        internal const string ProcedureExampleP = "pr_persona";
+
     }
 }

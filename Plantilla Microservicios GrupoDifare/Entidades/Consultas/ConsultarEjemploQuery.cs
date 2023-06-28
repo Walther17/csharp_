@@ -1,7 +1,6 @@
 ﻿using safeprojectname.Utils;
 using GDifare.Utilitario.Comun;
 using GDifare.Utilitario.Comun.Exceptions;
-using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace safeprojectname.Entidades.Consultas

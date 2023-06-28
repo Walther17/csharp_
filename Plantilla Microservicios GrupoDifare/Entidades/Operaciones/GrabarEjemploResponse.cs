@@ -1,6 +1,5 @@
 ﻿using GDifare.Utilitario.Comun;
 using GDifare.Utilitario.Servicios;
-using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace safeprojectname.Entidades.Operaciones
