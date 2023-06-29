@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CursosS.A._3._0.Models;
 
@@ -13,7 +14,8 @@ public partial class Curso
 
     public int? IdProfesor { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
 
-    public virtual Profesore? oProfesor { get; set; }
+    public virtual Profesore? oProfesor { get; set; } = null;
 }

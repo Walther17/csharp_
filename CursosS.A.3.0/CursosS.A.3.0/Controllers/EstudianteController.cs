@@ -29,8 +29,7 @@ namespace CursosS.A._3._0.Controllers
             try
             {
 
-                lista = db_context.Estudiantes
-                    .Include(c => c.oCurso).
+                lista = db_context.Estudiantes.
                     ToList();
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok", response = lista });
 
@@ -60,7 +59,6 @@ namespace CursosS.A._3._0.Controllers
             {
 
                 oEstudiante = db_context.Estudiantes
-                    .Include(c => c.oCurso)
                     .Where(e => e.Id == idEstudiante).FirstOrDefault();
 
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok", response = oEstudiante });

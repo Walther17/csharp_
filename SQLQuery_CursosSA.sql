@@ -41,13 +41,13 @@ create table curso(
 insert into estudiante (nombre, apellido, edad) values ('Dev','Joander',21)
 insert into profesor (nombre, apellido ) values ('Cesar','Alcivar')
 
-select * from estudiante
+select * from estudiantes
 
-select * from profesor
+select * from profesores
 
-insert into curso (nombre, id_estudiante, id_profesor ) values ('C#', 4,1)
+insert into cursos (nombre, descripcion, id_profesor ) values ('English', 'hdxjgfxdjhrtgshtrs',  1)
 
-select * from curso
+select * from cursos
 
 
 CREATE TABLE profesores (
@@ -61,16 +61,16 @@ CREATE TABLE cursos (
     nombre NVARCHAR(100) NOT NULL,
     descripcion NVARCHAR(500) NOT NULL,
 
-    id_profesor INT,
+    id_profesor INT null,
     FOREIGN KEY (id_profesor) REFERENCES profesores(id)
 );
 
-CREATE TABLE estudiantes (
+create TABLE estudiantes (
     id INT PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     apellido NVARCHAR(100) NOT NULL,
     edad INT,
-    id_curso INT,
+    id_curso INT null,
 
     FOREIGN KEY (id_curso) REFERENCES cursos(id)
 );
@@ -80,14 +80,6 @@ drop table Profesores
 
 
 create database cursos_sa2
-
-
-
-
-
-
-
-
 
 
 
