@@ -15,7 +15,7 @@ namespace safeprojectname.Entidades.ConsultasPersona
         public string nombre { get; set; }
 
 
-        [Column("(apellido")]
+        [Column("apellido")]
         [JsonPropertyName("apellido")]
         public string apellido { get; set; }
 

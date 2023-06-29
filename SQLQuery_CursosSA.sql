@@ -93,3 +93,4 @@ CREATE TABLE EstudiantesCursos (
     FOREIGN KEY (IdEstudiante) REFERENCES Estudiantes(IdEstudiante),
     FOREIGN KEY (IdCurso) REFERENCES Cursos(IdCurso)
 );
+
