@@ -14,17 +14,17 @@ namespace safeprojectname.Datos
 
         Persona Obtener(int id);
         PagedCollection<Persona> ObtenerListado(ListarPersonaQuery query);
-        GrabarPersonaResponse Grabar(GrabarPersonaRequest request);
+        public GrabarPersonaResponse Grabar(GrabarPersonaRequest request);
         GrabarPersonaResponse Grabar2(GrabarPersonaRequest request);
     }
 
-    public class MapeoDatosPersona: MapeoDatosBase, IMapeoDatosPersona
+    public class MapeoDatosPersona : MapeoDatosBase, IMapeoDatosPersona
     {
         public MapeoDatosPersona(ISqlServer _sqlServer)
           : base(_sqlServer) { }
 
 
-        GrabarPersonaResponse IMapeoDatosPersona.Grabar(GrabarPersonaRequest request)
+        public GrabarPersonaResponse Grabar(GrabarPersonaRequest request)
         {
             if (request.id > 0)
             {

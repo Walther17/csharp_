@@ -38,51 +38,57 @@ create table curso(
 
 );
 
-insert into estudiante (nombre, apellido, edad) values ('Dev','Joander',21)
-insert into profesor (nombre, apellido ) values ('Cesar','Alcivar')
+
+-----------
+
+
+insert into estudiantes (nombre, apellido, edad, id_curso) values ('Dev','Joander',20, 1)
+insert into profesores (nombre, apellido ) values ('Cesar','Alcivar')
+insert into cursos (nombre, descripcion, id_profesor ) values ('English', 'hdxjgfxdjhrtgshtrs',  1)
 
 select * from estudiantes
 
 select * from profesores
 
-insert into cursos (nombre, descripcion, id_profesor ) values ('English', 'hdxjgfxdjhrtgshtrs',  1)
 
 select * from cursos
 
 
 CREATE TABLE profesores (
-    id INT PRIMARY KEY,
+    id INT identity PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     apellido NVARCHAR(100) NOT NULL
 );
 
 CREATE TABLE cursos (
-    id INT PRIMARY KEY,
+    id INT identity PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     descripcion NVARCHAR(500) NOT NULL,
 
-    id_profesor INT null,
-    FOREIGN KEY (id_profesor) REFERENCES profesores(id)
+    id_profesor INT  ,
+    CONSTRAINT FK_ID_PROFESOR FOREIGN KEY (id_profesor) REFERENCES profesores(id)
 );
 
 create TABLE estudiantes (
-    id INT PRIMARY KEY,
+    id INT identity PRIMARY KEY,
     nombre NVARCHAR(100) NOT NULL,
     apellido NVARCHAR(100) NOT NULL,
     edad INT,
-    id_curso INT null,
+    id_curso INT 
 
-    FOREIGN KEY (id_curso) REFERENCES cursos(id)
+  CONSTRAINT FK_ID_CURSO  FOREIGN KEY (id_curso) REFERENCES cursos(id)
 );
 
 
-drop table Profesores
+drop table profesores
+drop table cursos
+drop table estudiantes
 
 
 create database cursos_sa2
 
 
-
+-- Scaffold-DbContext "Server=localhost; DataBase=cursos_sa2; Integrated Security=true; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models
 
 
 

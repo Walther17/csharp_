@@ -15,16 +15,18 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Nombre</th>
                         <th>Telefono</th>
                         <th>Correo</th>
-                        <th></th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>@item.IdContacto</td>
                             <td>@item.Nombre</td>
                             <td>@item.Telefono</td>
                             <td>@item.Correo</td>
