@@ -47,6 +47,7 @@
     <Compile Include="Learning\FuncionesAnonimas.cs" />
     <Compile Include="Learning\LinQ.cs" />
     <Compile Include="Learning\Operadores.cs" />
+    <Compile Include="LinQQQ\LinQQQ.cs" />
     <Compile Include="Model\Materia.cs" />
     <Compile Include="Model\Nota.cs" />
     <Compile Include="Model\Sistema.cs" />

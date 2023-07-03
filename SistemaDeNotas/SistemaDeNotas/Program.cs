@@ -12,14 +12,12 @@ namespace SistemaDeNotas
     {
         static void Main(string[] args)
         {
-             
-            Sistema s = new Sistema();
-            s.sistemaDeNotas();
-             FuncionesAnonimas  f = new FuncionesAnonimas();
-           // f.ExpresionLambda();
 
-            LinQ linQ = new LinQ();
-           // linQ.funciones();
-        }
+        Sistema s = new Sistema();
+           s.sistemaDeNotas();
+            // FuncionesAnonimas  f = new FuncionesAnonimas();
+            // f.ExpresionLambda();
+
+         }
     }
 }
