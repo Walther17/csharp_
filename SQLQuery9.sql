@@ -161,7 +161,7 @@ GROUP BY fabricante.nombre;
 
 --18. Muestra el precio máximo, precio mínimo, precio medio y el número total de productos de los fabricantes que tienen un precio medio superior a 200€.
 -- No es necesario mostrar el nombre del fabricante, con el identificador del fabricante es suficiente.
-)
+
 
 SELECT fabricante.id AS id_fabricante, 
        MAX(product.precio) AS precio_maximo,
