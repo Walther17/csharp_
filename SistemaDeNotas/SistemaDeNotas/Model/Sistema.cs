@@ -90,6 +90,7 @@ namespace SistemaDeNotas.Model
             }
         }
 
+        /*
         public void ClasificarNotasPorCategoria()
         {
             var notasPorCategoria = notas
@@ -116,7 +117,7 @@ namespace SistemaDeNotas.Model
                 Console.WriteLine();
             }
         }
-
+        */
 
         public void AddNota()
         {
