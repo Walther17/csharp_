@@ -543,3 +543,5 @@ as
 begin
 	delete from     CONTACTO   WHERE IdContacto = @IdContacto 
 end
+
+select* from  nota
