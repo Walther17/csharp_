@@ -1,0 +1,89 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\MicroserviciosGD1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\MicroserviciosGD1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\MicroserviciosGD1.csproj",
+        "projectName": "MicroserviciosGD1",
+        "projectPath": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\MicroserviciosGD1.csproj",
+        "packagesPath": "C:\\Users\\desarrollo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\Plantilla Microservicios GrupoDifare\\NuGet.Config",
+          "C:\\Users\\desarrollo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexusnp.grupodifare.com/repository/nuget-hosted": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "GDifare.Utilitario.BaseDatos": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "GDifare.Utilitario.Comun": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "GDifare.Utilitario.Log": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "GDifare.Utilitario.Servicios": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
