@@ -45,10 +45,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
                             this.lbltitulo.Text = "Modificar usuario";
                             this.BtnUpdate.Visible = true;
                             break;
-                        case "D":
-                            this.lbltitulo.Text = "Eliminar usuario";
-                            this.BtnDelete.Visible = true;
-                            break;
+                         
                     }
                 }
             }
@@ -83,7 +80,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             cmd.Parameters.Add("@Edad", SqlDbType.Int).Value = tbedad.Text;
             cmd.Parameters.Add("@Correo", SqlDbType.VarChar).Value = tbemail.Text;
             cmd.Parameters.Add("@Fecha_Nacimiento", SqlDbType.Date).Value = tbdate.Text;
-            cmd.Parameters.Add("@status", SqlDbType.VarChar).Value = ddlStatus.Text;
+            cmd.Parameters.Add("@Status", SqlDbType.VarChar).Value = ddlStatus.Text;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
@@ -99,12 +96,13 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             cmd.Parameters.Add("@Edad", SqlDbType.Int).Value = tbedad.Text;
             cmd.Parameters.Add("@Correo", SqlDbType.VarChar).Value = tbemail.Text;
             cmd.Parameters.Add("@Fecha_Nacimiento", SqlDbType.Date).Value = tbdate.Text;
-            cmd.Parameters.Add("@status", SqlDbType.VarChar).Value = ddlStatus.Text;
+            cmd.Parameters.Add("@Status", SqlDbType.VarChar).Value = ddlStatus.Text;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
         }
 
+        /*
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
 
@@ -124,7 +122,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
 
             }
 
-
+        */
             protected void BtnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
