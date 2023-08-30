@@ -7,12 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
-{
+namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages {
 
 
-    public partial class CRUD
-    {
+    public partial class CRUD {
 
         /// <summary>
         /// Control lbltitulo.
@@ -58,6 +56,15 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbdate;
+
+        /// <summary>
+        /// Control ddlStatus.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlStatus;
 
         /// <summary>
         /// Control BtnCreate.

@@ -70,6 +70,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             tbemail.Text = row[3].ToString();
             DateTime d = (DateTime)row[4];
             tbdate.Text = d.ToString("dd/MM/yyyy");
+            ddlStatus.Text = row[4].ToString();
             con.Close();
         }
 
@@ -82,6 +83,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             cmd.Parameters.Add("@Edad", SqlDbType.Int).Value = tbedad.Text;
             cmd.Parameters.Add("@Correo", SqlDbType.VarChar).Value = tbemail.Text;
             cmd.Parameters.Add("@Fecha_Nacimiento", SqlDbType.Date).Value = tbdate.Text;
+            cmd.Parameters.Add("@status", SqlDbType.VarChar).Value = ddlStatus.Text;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
@@ -97,6 +99,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             cmd.Parameters.Add("@Edad", SqlDbType.Int).Value = tbedad.Text;
             cmd.Parameters.Add("@Correo", SqlDbType.VarChar).Value = tbemail.Text;
             cmd.Parameters.Add("@Fecha_Nacimiento", SqlDbType.Date).Value = tbdate.Text;
+            cmd.Parameters.Add("@status", SqlDbType.VarChar).Value = ddlStatus.Text;
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("Index.aspx");
@@ -104,16 +107,25 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("sp_delete", con);
-            con.Open();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = sID;
-            cmd.ExecuteNonQuery();
-            con.Close();
-            Response.Redirect("Index.aspx");
-        }
 
-        protected void BtnVolver_Click(object sender, EventArgs e)
+            try {
+             SqlCommand cmd = new SqlCommand("sp_delete", con);
+                con.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = sID;
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Redirect("Index.aspx");
+            }
+            catch (Exception ex) {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+
+            }
+
+
+            protected void BtnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
         }

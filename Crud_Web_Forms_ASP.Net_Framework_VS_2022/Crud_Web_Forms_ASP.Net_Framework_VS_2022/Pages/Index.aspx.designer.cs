@@ -7,12 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
-{
+namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages {
 
 
-    public partial class Index
-    {
+    public partial class Index {
 
         /// <summary>
         /// Control BtnCreate.
