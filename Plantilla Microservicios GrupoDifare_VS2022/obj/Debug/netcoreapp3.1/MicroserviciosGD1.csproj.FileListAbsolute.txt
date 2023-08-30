@@ -100,3 +100,12 @@ C:\Users\desarrollo\Documents\Walther Olivo\C##\Plantilla Microservicios GrupoDi
 C:\Users\desarrollo\Documents\Walther Olivo\C##\Plantilla Microservicios GrupoDifare\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.MicroserviciosGD1.props
 C:\Users\desarrollo\Documents\Walther Olivo\C##\Plantilla Microservicios GrupoDifare\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.MicroserviciosGD1.props
 C:\Users\desarrollo\Documents\Walther Olivo\C##\Plantilla Microservicios GrupoDifare\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.MicroserviciosGD1.props
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.csproj.AssemblyReference.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.AssemblyInfoInputs.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.AssemblyInfo.cs
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.csproj.CoreCompileInputs.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.dll
+C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\Plantilla Microservicios GrupoDifare_VS2022\obj\Debug\netcoreapp3.1\MicroserviciosGD1.pdb

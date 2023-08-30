@@ -13,3 +13,11 @@ C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\Sistem
 C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.CoreCompileInputs.cache
 C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.exe
 C:\Users\wjoan\Documents\Desarrollador-web\safs\c#\csharp_\SistemaDeNotas\SistemaDeNotas\obj\Debug\SistemaDeNotas.pdb
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\bin\Debug\SistemaDeNotas.exe.config
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\bin\Debug\SistemaDeNotas.exe
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\bin\Debug\SistemaDeNotas.pdb
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.AssemblyReference.cache
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\obj\Debug\SistemaDeNotas.csproj.CoreCompileInputs.cache
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\obj\Debug\SistemaDeNotas.exe
+C:\Users\wjoan\Documents\Desarrollador-web\sasf\c#\csharp_\SistemaDeNotas_VS2022\SistemaDeNotas\obj\Debug\SistemaDeNotas.pdb

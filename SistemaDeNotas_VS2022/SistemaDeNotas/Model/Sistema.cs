@@ -78,7 +78,7 @@ namespace SistemaDeNotas.Model
 
                 while (sqlDataReader.Read())
                 {
-                    Console.WriteLine($"{sqlDataReader["id"]}\t {sqlDataReader["nota"]}\t { sqlDataReader["materia"]}\t");
+                    Console.WriteLine($"{sqlDataReader["id"]}\t    {sqlDataReader["nota"]}\t { sqlDataReader["materia"]}\t");
                 }
                 sqlDataReader.Close();
 

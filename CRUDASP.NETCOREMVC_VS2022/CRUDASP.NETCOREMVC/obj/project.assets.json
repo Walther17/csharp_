@@ -9891,29 +9891,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\desarrollo\\.nuget\\packages\\": {}
+    "C:\\Users\\wjoan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC.csproj",
+      "projectUniqueName": "C:\\Users\\wjoan\\Documents\\Desarrollador-web\\sasf\\c#\\csharp_\\CRUDASP.NETCOREMVC_VS2022\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC.csproj",
       "projectName": "CRUDASP.NETCOREMVC",
-      "projectPath": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC.csproj",
-      "packagesPath": "C:\\Users\\desarrollo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\desarrollo\\Documents\\Walther Olivo\\C##\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC\\obj\\",
+      "projectPath": "C:\\Users\\wjoan\\Documents\\Desarrollador-web\\sasf\\c#\\csharp_\\CRUDASP.NETCOREMVC_VS2022\\CRUDASP.NETCOREMVC\\CRUDASP.NETCOREMVC.csproj",
+      "packagesPath": "C:\\Users\\wjoan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wjoan\\Documents\\Desarrollador-web\\sasf\\c#\\csharp_\\CRUDASP.NETCOREMVC_VS2022\\CRUDASP.NETCOREMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\desarrollo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+        "C:\\Users\\wjoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9960,7 +9958,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
