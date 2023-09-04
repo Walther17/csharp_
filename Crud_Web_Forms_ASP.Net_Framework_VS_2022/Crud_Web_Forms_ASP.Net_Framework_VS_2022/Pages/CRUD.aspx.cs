@@ -81,7 +81,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022.Pages
             cmd.Parameters.Add("@Correo", SqlDbType.VarChar).Value = tbemail.Text;
             cmd.Parameters.Add("@Fecha_Nacimiento", SqlDbType.Date).Value = tbdate.Text;
             cmd.Parameters.Add("@Status", SqlDbType.VarChar).Value = ddlStatus.Text;
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery(); 
             con.Close();
             Response.Redirect("Index.aspx");
         }

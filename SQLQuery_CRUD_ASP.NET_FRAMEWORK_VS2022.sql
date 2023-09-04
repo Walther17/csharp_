@@ -10,6 +10,7 @@ Fecha_Nacimiento date,
 Status varchar(10)
 );
 
+drop procedure sp_Load
 create procedure sp_Load
 as begin
 SELECT * FROM Usuarios where status = 'Activo';
@@ -17,6 +18,7 @@ End
 
 Update Usuarios SET status = 'Activo';
 --
+drop procedure sp_creat
 create procedure sp_creat
 @Nombre varchar(40),
 @Edad int,
@@ -28,13 +30,14 @@ insert into Usuarios values (@Nombre, @Edad, @Correo, @Fecha_Nacimiento, @Status
 End
 
 ---
+drop procedure sp_read
 create procedure sp_read
 @Id int
 as begin
 SELECT * FROM Usuarios where Id_Usuario = @Id
 End
 ----
-
+drop procedure sp_update
 create procedure sp_update
 @Id int,
 @Nombre varchar(40),
@@ -48,6 +51,7 @@ End
 
 ---
 
+drop procedure sp_delete
 create procedure sp_delete
 @Id int
 as begin

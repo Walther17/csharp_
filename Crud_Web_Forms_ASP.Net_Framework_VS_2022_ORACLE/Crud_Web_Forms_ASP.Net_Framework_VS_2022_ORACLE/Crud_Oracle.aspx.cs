@@ -16,7 +16,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022_ORACLE
     {
 
 
-        OracleConnection con = new OracleConnection(ConfigurationManager.ConnectionStrings["connection_"].ConnectionString);
+        OracleConnection con = new OracleConnection(ConfigurationManager.ConnectionStrings["conexion"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -41,6 +41,7 @@ namespace Crud_Web_Forms_ASP.Net_Framework_VS_2022_ORACLE
                 con.Close();
             } catch (Exception ex)
             {
+                lblError.Text = $"Error: {ex.Message}";
                 Console.WriteLine($"Error: {ex.Message}");
             }
 

@@ -28,8 +28,11 @@
     <asp:TextBox  runat="server"  class="form-control" id="exampleInputPassword1"></asp:TextBox>
   </div>
   
-  <asp:Button  runat="server" OnClick="btnSubmit"  class="btn btn-primary"/> 
+  <asp:Button Text="ok"  runat="server" OnClick="btnSubmit"  class="btn btn-primary"/> 
+        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
+
     </form>
+
 
 
 </body>
@@ -38,4 +41,8 @@
 
 <!--
     Instalar el paquete de NuGet Oracle.ManagedDataAccess
+
+    
+connectionString="Data Source=olimac_services=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))) (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=SYSTEM;Password=sys;"
+
     >

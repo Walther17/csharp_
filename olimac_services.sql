@@ -15,17 +15,18 @@ CREATE TABLE USUARIOS (
     PASSSWORD VARCHAR2(100)
 );
 
-
 CREATE OR REPLACE PROCEDURE oc_create (
-    u_email IN VARCHAR2,
-    u_passsword IN VARCHAR2
+    u_email IN USUARIOS.EMAIL%TYPE,
+    u_password IN USUARIOS.PASSSWORD%TYPE
 )
 AS
 BEGIN
     INSERT INTO USUARIOS (EMAIL, PASSSWORD)
-    VALUES (u_email, u_passsword);
+    VALUES (u_email, u_password);
     COMMIT;
 END;
+
+
 SELECT * FROM  USUARIOS;
 
 SELECT * FROM  PERSONA;
@@ -35,8 +36,8 @@ UPDATE PERSONA SET EDAD = 20;
 INSERT INTO PERSONA (NOMBRE, EDAD)  VALUES ('WALTHER', 20);
 
 -- Tipos Variables
--- Las variables son nombres que se le ponen a un área de almacenamiento, se utlizan para almacenar y manipular valores dentro de un bloque de code.
--- Las constantes son como las variables, la diferencia radica en que su valor no varía.
+-- Las variables son nombres que se le ponen a un ï¿½rea de almacenamiento, se utlizan para almacenar y manipular valores dentro de un bloque de code.
+-- Las constantes son como las variables, la diferencia radica en que su valor no varï¿½a.
 -- Bloque de Code in PLSQL
  
 DECLARE
@@ -66,7 +67,7 @@ END;
 
 
 -- Condicionales
--- Son estructuras de toma de decisiones, puedes utilizar las sentencias IF-THEN-ELSE para implementar lógica condicional en tus procedimientos, funciones o bloques anónimos.
+-- Son estructuras de toma de decisiones, puedes utilizar las sentencias IF-THEN-ELSE para implementar lï¿½gica condicional en tus procedimientos, funciones o bloques anï¿½nimos.
 -- Los condicionales son; IF, ELSIF y ELSE, el condicional if se cierra con el ENDIF.
 
 DECLARE
@@ -75,7 +76,7 @@ BEGIN
     IF EDAD >= 18 THEN
         DBMS_OUTPUT.PUT_LINE('ES MAYOR DE EDAD.');
     ELSIF edad < 10 THEN
-        DBMS_OUTPUT.PUT_LINE('ES UN NIÑO.');
+        DBMS_OUTPUT.PUT_LINE('ES UN NIï¿½O.');
     ELSE
         DBMS_OUTPUT.PUT_LINE('ES MENOR DE EDAD.');
     END IF;
@@ -87,7 +88,7 @@ DECLARE
    -- CONTADOR NUMBER;
 BEGIN
     FOR CONTADOR IN -10..5 LOOP
-        DBMS_OUTPUT.PUT_LINE('ITERACIÓN: ' || CONTADOR);
+        DBMS_OUTPUT.PUT_LINE('ITERACIï¿½N: ' || CONTADOR);
     END LOOP;
 END;
 
@@ -95,7 +96,7 @@ DECLARE
     CONTADOR NUMBER := 1;
 BEGIN
     FOR CONTADOR IN 1..5 LOOP
-        DBMS_OUTPUT.PUT_LINE('ITERACIÓN: ' || CONTADOR);
+        DBMS_OUTPUT.PUT_LINE('ITERACIï¿½N: ' || CONTADOR);
     END LOOP;
 END;
 
@@ -105,7 +106,7 @@ DECLARE
     CONTADOR NUMBER := 1;
 BEGIN
     WHILE CONTADOR <= 5 LOOP
-        DBMS_OUTPUT.PUT_LINE('ITERACIÓN: ' || CONTADOR);
+        DBMS_OUTPUT.PUT_LINE('ITERACIï¿½N: ' || CONTADOR);
         CONTADOR := CONTADOR + 1;
     END LOOP;
 END;
@@ -116,7 +117,7 @@ DECLARE
     valor NUMBER := 1;
 BEGIN
     loop
-        DBMS_OUTPUT.PUT_LINE('Iteración: ' || valor);
+        DBMS_OUTPUT.PUT_LINE('Iteraciï¿½n: ' || valor);
         valor := valor + 1;
         if valor = 6 then
         exit;
@@ -124,9 +125,9 @@ BEGIN
     END LOOP;
 END;
 
--- Métodos STRINGS
--- UPPER: Convierte una cadena en mayúsculas.
--- LOWER: Convierte una cadena en minúsculas.
+-- Mï¿½todos STRINGS
+-- UPPER: Convierte una cadena en mayï¿½sculas.
+-- LOWER: Convierte una cadena en minï¿½sculas.
 
 DECLARE
    texto VARCHAR2(100) := 'h0La mundo';
@@ -139,7 +140,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE(texto2); 
 END;
 
--- INITCAP: Convierte la primera letra de cada palabra en mayúscula y el resto en minúsculas.
+-- INITCAP: Convierte la primera letra de cada palabra en mayï¿½scula y el resto en minï¿½sculas.
 DECLARE
    texto VARCHAR2(100) := 'hola mundo';
 BEGIN
@@ -147,7 +148,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE(texto); -- Salida: Hola Mundo
 END;
 
--- SUBSTR: Obtiene una subcadena de la cadena original, debes pasar por parametros la posición del inicio y el final de la extracción.
+-- SUBSTR: Obtiene una subcadena de la cadena original, debes pasar por parametros la posiciï¿½n del inicio y el final de la extracciï¿½n.
 
 DECLARE
    texto VARCHAR2(100) := 'Hola Mundo';
@@ -157,7 +158,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE(subcadena); -- Salida: Hola
 END;
 
--- INSTR: Busca la posición de una subcadena dentro de otra cadena y muestra la posición.
+-- INSTR: Busca la posiciï¿½n de una subcadena dentro de otra cadena y muestra la posiciï¿½n.
 DECLARE
    texto VARCHAR2(100) := 'Hola Mundo';
    posicion NUMBER;
@@ -166,7 +167,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE(posicion); -- Salida: 6
 END;
 
--- RTRIM, LTRIM, TRIM: Eliminan espacios en blanco (u otro carácter especificado) al final (RTRIM), al principio (LTRIM) o tanto al principio como al final (TRIM) de una cadena.
+-- RTRIM, LTRIM, TRIM: Eliminan espacios en blanco (u otro carï¿½cter especificado) al final (RTRIM), al principio (LTRIM) o tanto al principio como al final (TRIM) de una cadena.
 DECLARE
    texto VARCHAR2(100) := '**Hola Mundo**';
 BEGIN
@@ -199,8 +200,8 @@ BEGIN
 END;
 
 -- MATRICES
--- En Oracle el índice inicial para un array o matriz es siempre 1.
--- Inicializas el array utilizando el método constructor del tipo varray.
+-- En Oracle el ï¿½ndice inicial para un array o matriz es siempre 1.
+-- Inicializas el array utilizando el mï¿½todo constructor del tipo varray.
 -- Los arrays o matrices sin unidimensionales en PLSQL.
 
 
@@ -225,7 +226,7 @@ END;
 -- TIPOS
 -- A nivel de esquema, dentro de un paquete, dentro de un bloque PLSQL.
 
--- A nivel de esquema es independiente de cualquier paquete o bloque PL/SQL y puede ser invocado desde cualquier lugar dentro del esquema en el que está definido.
+-- A nivel de esquema es independiente de cualquier paquete o bloque PL/SQL y puede ser invocado desde cualquier lugar dentro del esquema en el que estï¿½ definido.
 -- Los procedimientos definidos dentro de un paquete son parte de ese paquete y pueden ser accedidos solo dentro del contexto del paquete.
 -- Los procedimientos definidos dentro de un bloque PL/SQL solo pueden ser invocados desde dentro del mismo bloque.
 
@@ -251,7 +252,7 @@ AS
         INSERT INTO persona (nombre, edad) VALUES (nombre, edad);
         END newRowInTablePersona;
 
-EXECUTE  newRowInTablePersona('María', 23);
+EXECUTE  newRowInTablePersona('Marï¿½a', 23);
 
 --
 CREATE TABLE libros (
@@ -291,7 +292,7 @@ EXECUTE autorLibro('Buscando a Nemo');
 
 
 -- FUNCIONES EN PLSQL
--- En PL/SQL, una función es un bloque de código que realiza una tarea específica y devuelve un valor como resultado.
+-- En PL/SQL, una funciï¿½n es un bloque de cï¿½digo que realiza una tarea especï¿½fica y devuelve un valor como resultado.
 
 
 CREATE OR REPLACE FUNCTION calcular_area_circulo (radio NUMBER)
@@ -315,12 +316,12 @@ is
     case numero
     when 1 then dia := 'Lunes';
     when 2 then dia := 'Martes';
-    when 3 then dia := 'Miércoles';
+    when 3 then dia := 'Miï¿½rcoles';
     when 4 then dia := 'Jueves';
     when 5 then dia := 'Viernes';
-    when 6 then dia := 'Sábado';
+    when 6 then dia := 'Sï¿½bado';
     when 7 then dia := 'Domingo';
-    else dia := 'Ese número es correcto';
+    else dia := 'Ese nï¿½mero es correcto';
  end case;
     return dia;
 end;
@@ -329,22 +330,22 @@ select diasdelasemana(2) from dual;
 
     
 -- TRIGGERS 
--- Los triggers o disparadores son bloques de código que se ejecutan de forma automatica.
+-- Los triggers o disparadores son bloques de cï¿½digo que se ejecutan de forma automatica.
 
--- CLASIFICACIÓN  
+-- CLASIFICACIï¿½N  
 
--- Según el momento de ejecución.
--- Triggers BEFORE: Se ejecutan antes de que se complete la operación en la tabla (inserción, actualización o eliminación).
--- Triggers AFTER: Se ejecutan después de que se complete la operación en la tabla. Pueden utilizarse para realizar acciones adicionales despu?s de que se realice la operación.
+-- Segï¿½n el momento de ejecuciï¿½n.
+-- Triggers BEFORE: Se ejecutan antes de que se complete la operaciï¿½n en la tabla (inserciï¿½n, actualizaciï¿½n o eliminaciï¿½n).
+-- Triggers AFTER: Se ejecutan despuï¿½s de que se complete la operaciï¿½n en la tabla. Pueden utilizarse para realizar acciones adicionales despu?s de que se realice la operaciï¿½n.
 
--- Según el evento que desencadenan:
--- Triggers de inserción (INSERT): Se ejecutan cuando se inserta una nueva fila en la tabla.
--- Triggers de actualización (UPDATE): Se ejecutan cuando se actualiza una o varias filas en la tabla.
--- Triggers de eliminación (DELETE): Se ejecutan cuando se elimina una o varias filas de la tabla.
+-- Segï¿½n el evento que desencadenan:
+-- Triggers de inserciï¿½n (INSERT): Se ejecutan cuando se inserta una nueva fila en la tabla.
+-- Triggers de actualizaciï¿½n (UPDATE): Se ejecutan cuando se actualiza una o varias filas en la tabla.
+-- Triggers de eliminaciï¿½n (DELETE): Se ejecutan cuando se elimina una o varias filas de la tabla.
 
--- Según el nivel de fila o tabla:
--- Triggers de fila (ROW-level): Se ejecutan para cada fila afectada por la operación. Son útiles cuando se necesita realizar acciones específicas en función de cambios en filas individuales en una tabla. 
--- Triggers de tabla (TABLE-level): Se ejecutan una vez para cada operación, independientemente del número de filas afectadas. 
+-- Segï¿½n el nivel de fila o tabla:
+-- Triggers de fila (ROW-level): Se ejecutan para cada fila afectada por la operaciï¿½n. Son ï¿½tiles cuando se necesita realizar acciones especï¿½ficas en funciï¿½n de cambios en filas individuales en una tabla. 
+-- Triggers de tabla (TABLE-level): Se ejecutan una vez para cada operaciï¿½n, independientemente del nï¿½mero de filas afectadas. 
 
 select * from control;
 
@@ -363,7 +364,7 @@ select  * from user_triggers where trigger_name='TR_INGRESOLIBROS';
 create or replace NONEDITIONABLE TRIGGER INSERTPERSONAS
 after INSERT
 ON persona
-for each row -- El for each row significa que el trigger se activará y ejecutará para cada fila afectada por la operación INSERT que lo desencadena.
+for each row -- El for each row significa que el trigger se activarï¿½ y ejecutarï¿½ para cada fila afectada por la operaciï¿½n INSERT que lo desencadena.
  begin
   insert into control values (user, sysdate, 'insertando');
 end INSERTPERSONAS;
@@ -390,7 +391,7 @@ end updatePersona;
 
 UPDATE PERSONA SET NOMBRE = 'WALTHER OLIVO MACIAS' WHERE ID=1;
 
--- TRIGGER MÚLTIPLES EVENTOS 
+-- TRIGGER Mï¿½LTIPLES EVENTOS 
 create or replace NONEDITIONABLE trigger TR_MULTIPLES_EVENTOS
 before insert or update or delete
 on persona
@@ -409,7 +410,7 @@ end TR_MULTIPLES_EVENTOS;
 
 -- TRIGGERS :NEW AND :OLD
 -- CUANDO TRABAJAMOS TRIGGERS A NIVEL DE FILA ORACLE NOS PROPORCIONA DOS TABLAS TEMPORALES QUE CONTIENEN 
--- LOS ANTIGUOS Y NUEVOS VALORES DE LOS REGISTROS AFECTADOS CON LA SENTENCIA QUE DISPARÓ DICHO TRIGGER,
+-- LOS ANTIGUOS Y NUEVOS VALORES DE LOS REGISTROS AFECTADOS CON LA SENTENCIA QUE DISPARï¿½ DICHO TRIGGER,
 -- EL VALOR VIEJO ES OLD Y EL VALOR NUEVO SE ALMACENA EN EL NEW.
 
 
@@ -490,16 +491,16 @@ begin
 ALTER TRIGGER updateFormatInTableLibros disable -- or enable;
 
 --  Un cursor es un puntero que se utiliza para manjear sentencias select.
---  Cursores implícitos. Estos devuelven un registro en específico.
---  Cursores explícitos. Se utilizan cuando la sentencia select devuelve varios registros
+--  Cursores implï¿½citos. Estos devuelven un registro en especï¿½fico.
+--  Cursores explï¿½citos. Se utilizan cuando la sentencia select devuelve varios registros
 
 -- Atributos
--- %ISOPEN. Devuelve true si el cursor está abierto
+-- %ISOPEN. Devuelve true si el cursor estï¿½ abierto
 -- %FOUND. Devuelve true si el registro fue procesado satisfactoriamente.
 -- %NOTFOUND. Devuelve true si el registro no pudo ser procesado.
--- %ROWCOUNT. Devuelve el núsmero de registros que han sido procesados hasta ese momento.
+-- %ROWCOUNT. Devuelve el nï¿½smero de registros que han sido procesados hasta ese momento.
 
--- CURSORES EXPLÍCITOS
+-- CURSORES EXPLï¿½CITOS
 
 select * from libros;
 
@@ -516,10 +517,10 @@ begin
 end;
 
 -- Partes del cursor
--- Declare : En esta parte, se declara y define el cursor, especificando la consulta SQL que se utilizará para obtener los datos. 
+-- Declare : En esta parte, se declara y define el cursor, especificando la consulta SQL que se utilizarï¿½ para obtener los datos. 
 -- Open: Se debe abrir antes de utilizarlo. La apertura del cursor ejecuta la consulta y carga los resultados en la memoria
--- Fetch: Es una función que recupera cada fila de la consulta ejecutada.
--- Empty: Evalúa si los registros cumplen con las funciones de los atributos 
+-- Fetch: Es una funciï¿½n que recupera cada fila de la consulta ejecutada.
+-- Empty: Evalï¿½a si los registros cumplen con las funciones de los atributos 
 -- Close: Se cierra el cursor y libera recursos.
 
 declare 
@@ -563,7 +564,7 @@ select * from persona;
 select p.edad from persona p;
 
 
--- CURSOR CON PARÁMETROS 
+-- CURSOR CON PARï¿½METROS 
 
 declare
     c_libro libros.titulo%type;
@@ -605,9 +606,9 @@ select getLibro(1) from dual;
 -- Variable compuesta a nivel de tabla
 
 declare 
-	vc_libros libros%rowtype; -- El rowtype toma todos los tipos de datos de la tabla y los guarda en una variable, entonces vc_libros tendrá acceso a todos los campos de la tabla libros.
+	vc_libros libros%rowtype; -- El rowtype toma todos los tipos de datos de la tabla y los guarda en una variable, entonces vc_libros tendrï¿½ acceso a todos los campos de la tabla libros.
 begin
-	select * into vc_libros from libros -- select * into , aquí seleccionamos todos los registros from liibros y los guardamos en la variable compuesta
+	select * into vc_libros from libros -- select * into , aquï¿½ seleccionamos todos los registros from liibros y los guardamos en la variable compuesta
     where id = 1;
 	dbms_output.put_line('ID: ' || vc_libros.id);
 	dbms_output.put_line('TITULO: ' || vc_libros.titulo);
@@ -618,7 +619,7 @@ end;
 
 
 declare 
-	cursor cu_libros is -- con el is defines que guardará o que datos va a manipular el cursor, en este caso serán todos los libros, por el select * from libros.
+	cursor cu_libros is -- con el is defines que guardarï¿½ o que datos va a manipular el cursor, en este caso serï¿½n todos los libros, por el select * from libros.
 	select * from libros;
 	vc_libros cu_libros%rowtype;
 begin
@@ -632,11 +633,11 @@ end;
 
 
 -- Package
--- Son un grupo lógico de objetos de la DB, tales como, variables, procedimientos, bloques de code, etc.
--- Todos estos objetos se relacionan entre sí, son encapsulados y convertidos en una unidad dentro de la DB.
+-- Son un grupo lï¿½gico de objetos de la DB, tales como, variables, procedimientos, bloques de code, etc.
+-- Todos estos objetos se relacionan entre sï¿½, son encapsulados y convertidos en una unidad dentro de la DB.
 
 -- Partes del Package
--- Especificación, es obligatoria de configurar, se definen variables, procedures, functions, etc.
+-- Especificaciï¿½n, es obligatoria de configurar, se definen variables, procedures, functions, etc.
 -- Body, no es obligatoria y es el body del package.
 
 -- ESPECIFICACION DEL PACKAGE
@@ -720,7 +721,7 @@ CONNECT BY PRIOR ID_EMPLEADO = ID_SUPERVISOR;
 
 
 -- TRANSACCIONES
--- Es una unidad atómica de trabajo que ouede contar por una o más sentencias relacionadas entre sí.
+-- Es una unidad atï¿½mica de trabajo que ouede contar por una o mï¿½s sentencias relacionadas entre sï¿½.
 -- Con decir atomica me refiero a que las modificaciones de la DB provocadas por las sentencias pueden ser permanentes o pueden desaserce.
 
 drop table clientes;
@@ -738,14 +739,14 @@ insert into clientes values (3,'Ana Jimenez',23,'Calle tercera numero 003',2000.
 insert into clientes values (4,'Emilio Contreras',25,'Calle cuarta numero 004',6500.00); 
 insert into clientes values (6,'Pedro Sandoval',22,'Calle quinta numero 005',4500.00); 
 
-COMMIT ; -- GUARDA AQUELLA TRANSACCI?N O MODIFICACIÓN
+COMMIT ; -- GUARDA AQUELLA TRANSACCI?N O MODIFICACIï¿½N
 
-ROLLBACK; -- ES COMO EL CTRL Z, DESACE LA TRANSACCIÓN
+ROLLBACK; -- ES COMO EL CTRL Z, DESACE LA TRANSACCIï¿½N
 
 
 
-SAVEPOINT P1; -- Se utiliza para establecer un punto de guardado dentro de una transacción. 
--- Esto permite realizar una acción y, si algo falla después, se puede retroceder solo hasta el punto de guardado (SAVEPOINT) en lugar de deshacer toda la transacción.
+SAVEPOINT P1; -- Se utiliza para establecer un punto de guardado dentro de una transacciï¿½n. 
+-- Esto permite realizar una acciï¿½n y, si algo falla despuï¿½s, se puede retroceder solo hasta el punto de guardado (SAVEPOINT) en lugar de deshacer toda la transacciï¿½n.
 
 insert into  clientes values (7,'Esther Sanchez',27,'Calle sexta numero 006',5500.00 ); 
 insert into  clientes values (8,'Antonio Peralta',21,'Calle septima numero 007',4500.00 ); 
@@ -758,9 +759,9 @@ SELECT * FROM CLIENTES;
 ROLLBACK TO P1; -- DESACE UN CAMBIO ESPECIFICADO
 
 
--- los "jobs" se refieren a tareas programadas o procesos automatizados que se ejecutan de forma periódica o en un momento específico en la base de datos Oracle. 
--- Estos jobs se crean utilizando el Oracle Job Scheduler, una característica que permite a los desarrolladores programar la ejecución de ciertas tareas o procedimientos de forma automatizada.
--- Los jobs se refieren a la capacidad de programar y automatizar ciertas tareas para que se ejecuten de forma automática en un horario determinado
+-- los "jobs" se refieren a tareas programadas o procesos automatizados que se ejecutan de forma periï¿½dica o en un momento especï¿½fico en la base de datos Oracle. 
+-- Estos jobs se crean utilizando el Oracle Job Scheduler, una caracterï¿½stica que permite a los desarrolladores programar la ejecuciï¿½n de ciertas tareas o procedimientos de forma automatizada.
+-- Los jobs se refieren a la capacidad de programar y automatizar ciertas tareas para que se ejecuten de forma automï¿½tica en un horario determinado
 
 drop table log_actividades;
 
@@ -825,8 +826,8 @@ BEGIN
 END;
 
 -- COLECCIONES
--- ES UN TIPO DE DATO COMPUESTO QUE CONSITE EN UNA MATRIZ DE UNA SOLA DIMENSIÓN, COMPUESTA POR UNO O MÁS ELEMENTOS,
--- PODEMOS ACCEDER A ELLA MEDIANTE LOS ÍNDICES, SON OBJETOS CON DOS COLUMNAS, TIPO CLAVE VALOR.
+-- ES UN TIPO DE DATO COMPUESTO QUE CONSITE EN UNA MATRIZ DE UNA SOLA DIMENSIï¿½N, COMPUESTA POR UNO O Mï¿½S ELEMENTOS,
+-- PODEMOS ACCEDER A ELLA MEDIANTE LOS ï¿½NDICES, SON OBJETOS CON DOS COLUMNAS, TIPO CLAVE VALOR.
 
 DECLARE 
     TYPE LIBROS IS TABLE OF libros.titulo%type
@@ -928,11 +929,11 @@ begin
 exception
   when NO_DATA_FOUND then
      dbms_output.put_line('No se encontr? el id');
-  when TOO_MANY_ROWS then -- Indica que los datos a recuperar son más de los que se solicitan
-    dbms_output.put_line('La recuperación exacta devuelve un número mayor de filas que el solicitado');
+  when TOO_MANY_ROWS then -- Indica que los datos a recuperar son mï¿½s de los que se solicitan
+    dbms_output.put_line('La recuperaciï¿½n exacta devuelve un nï¿½mero mayor de filas que el solicitado');
   when zero_divide then 
     dbms_output.put_line('Imposible dividir entre 0');
-  when dup_val_on_index then -- Indica si el valor que se está insertando ya existe
+  when dup_val_on_index then -- Indica si el valor que se estï¿½ insertando ya existe
      dbms_output.put_line('El valor insertado ya existe');
   when others then 
      --dbms_output.put_line('Exception not controlled');
@@ -962,7 +963,7 @@ begin
   empl.nombre := 'Tom and Jerry';
   select id_empleado into empl_control from empleados
   where id_empleado = empl.id_empleado;
-  -- El código del error debe estar entre -20000 y -20999
+  -- El cï¿½digo del error debe estar entre -20000 y -20999
   raise_application_error(-20001, 'El empleado ya existe');
   --dbms_output.put_line('El libro ya existe');
 exception
@@ -975,11 +976,11 @@ select * from empleados;
 
 
 -- POO EN ORACLE 
--- Oracle es una DB relacional, por ende no es una DB de tipo objeto, sin embargo Oracle incorpora funcionalidades para trabajar con características de las DB orientadas a objetos.
+-- Oracle es una DB relacional, por ende no es una DB de tipo objeto, sin embargo Oracle incorpora funcionalidades para trabajar con caracterï¿½sticas de las DB orientadas a objetos.
 
--- Objetos, Atributos y Métodos
+-- Objetos, Atributos y Mï¿½todos
 
--- Creación de objetos
+-- Creaciï¿½n de objetos
 
 create or replace type libro as object(
 
@@ -988,7 +989,7 @@ id_ number,
 titulo varchar2(200),
 precio number,
 
--- Métodos
+-- Mï¿½todos
 member function ver_libro return varchar2,
 member function ver_precio return number,
 member function ver_precio(iva number) return number, -- Sobrecarga de m?todos
@@ -1020,7 +1021,7 @@ member function ver_precio(iva number) return number as
 
 member procedure cambiar_precio (precio number) as
  begin 
-  self.precio:=  precio; -- al poner self hace referencia al atributo del objeto, más no al parametro que le pasamos.
+  self.precio:=  precio; -- al poner self hace referencia al atributo del objeto, mï¿½s no al parametro que le pasamos.
 end cambiar_precio;
 
 static procedure auditoria
@@ -1044,7 +1045,7 @@ end;
 
 
 begin
- libro.auditoria; -- En los métodos estaticos debemos escribir el objeto más mi método estático.
+ libro.auditoria; -- En los mï¿½todos estaticos debemos escribir el objeto mï¿½s mi mï¿½todo estï¿½tico.
 end;
 
 select * from auditoria;
@@ -1062,8 +1063,8 @@ begin
     dbms_output.put_line(v1.ver_libro());
 end;
 
--- Método self para atributos
--- Con el método self puedes hacer referencia a una propiedad y a una variable con el mimsmo nombre
+-- Mï¿½todo self para atributos
+-- Con el mï¿½todo self puedes hacer referencia a una propiedad y a una variable con el mimsmo nombre
 declare 
     lb1 libro;
 begin
@@ -1075,7 +1076,7 @@ begin
 
 end;
 
--- Métodos est?ticos
+-- Mï¿½todos est?ticos
 
 drop table auditoria;
 create table auditoria(
@@ -1089,7 +1090,7 @@ create table auditoria(
 -- alter table libros rename to <nuevo_nombre>
 
 -- VER OBJETOS
--- desc  <nombre_del_objeto> , podemos ver la descripción del objeto o de la tabla. 
+-- desc  <nombre_del_objeto> , podemos ver la descripciï¿½n del objeto o de la tabla. 
 desc libro;
 select * from user_source;
 select * from user_types;
@@ -1103,7 +1104,7 @@ select * from user_types;
     overriding member function ver_precio return number -- sobreescritura de m?todos
 
     ); 
--- Si tienes un objeto padre y creas un objeto que hereda de el , si necesitar alterar algo del objeto padre procura eliminar al objeto hijo y actualizar, luego podrás crear tu objecto heredado sin problemas.
+-- Si tienes un objeto padre y creas un objeto que hereda de el , si necesitar alterar algo del objeto padre procura eliminar al objeto hijo y actualizar, luego podrï¿½s crear tu objecto heredado sin problemas.
 
 drop type animados;
 
@@ -1116,7 +1117,7 @@ member function ver_fecha return varchar2 as
     
     end;
     
-    overriding member function ver_precio return number as -- sobreescritura de métodos
+    overriding member function ver_precio return number as -- sobreescritura de mï¿½todos
  
     begin
     return precio + 10;
@@ -1151,19 +1152,19 @@ insert into tienda values (1, 9393, libro(2, 'El chavo del 8', 9));
 select t.libro.titulo from tienda t;
 select t.libro.precio from tienda t;
 
--- JSON JavaScript Object Notation, es decir notación de objeto de JavaScript se utiliza para estructurar datos en forma de texto y permite el intercambio de información entre aplicaciones de manera sencilla, liviana y rápida.
+-- JSON JavaScript Object Notation, es decir notaciï¿½n de objeto de JavaScript se utiliza para estructurar datos en forma de texto y permite el intercambio de informaciï¿½n entre aplicaciones de manera sencilla, liviana y rï¿½pida.
 
 -- funciones 
 
--- JSON_QUERY: Similar a JSON_VALUE, JSON_QUERY se utiliza para extraer un valor específico de un documento JSON. 
--- JSON_VALUE: Esta función se utiliza para extraer un valor específico de un documento JSON.
--- JSON_EXISTS: Con esta función, puedes verificar si una ruta de búsqueda específica (JSON Path) existe en el documento JSON. Retorna un valor booleano que indica si la ruta existe o no.
--- JSON_TABLE: Esta función te permite transformar datos JSON en filas y columnas. Puedes utilizar JSON_TABLE para consultar y procesar datos JSON como si estuvieras trabajando con una tabla relacional.
--- JSON_ARRAY: JSON_ARRAY te permite crear un array JSON. Puedes especificar una lista de valores que se incluirán en el array JSON resultante.
--- SON_OBJECT: Con JSON_OBJECT, puedes crear un objeto JSON. Puedes especificar pares clave-valor que se incluirán en el objeto JSON resultante.
+-- JSON_QUERY: Similar a JSON_VALUE, JSON_QUERY se utiliza para extraer un valor especï¿½fico de un documento JSON. 
+-- JSON_VALUE: Esta funciï¿½n se utiliza para extraer un valor especï¿½fico de un documento JSON.
+-- JSON_EXISTS: Con esta funciï¿½n, puedes verificar si una ruta de bï¿½squeda especï¿½fica (JSON Path) existe en el documento JSON. Retorna un valor booleano que indica si la ruta existe o no.
+-- JSON_TABLE: Esta funciï¿½n te permite transformar datos JSON en filas y columnas. Puedes utilizar JSON_TABLE para consultar y procesar datos JSON como si estuvieras trabajando con una tabla relacional.
+-- JSON_ARRAY: JSON_ARRAY te permite crear un array JSON. Puedes especificar una lista de valores que se incluirï¿½n en el array JSON resultante.
+-- SON_OBJECT: Con JSON_OBJECT, puedes crear un objeto JSON. Puedes especificar pares clave-valor que se incluirï¿½n en el objeto JSON resultante.
 -- JSON_SERIALIZE: JSON_SERIALIZE se utiliza para convertir un valor de datos en formato JSON. 
--- JSON_ARRAYAGG: JSON_ARRAYAGG se usa para agregar valores en un array JSON. Esta función toma valores individuales y los agrupa en un array JSON.
--- JSON_MERGEPATCH: Esta función se utiliza para fusionar datos JSON. Puedes proporcionar un documento JSON y un parche JSON, y la función aplicará los cambios del parche al documento.
+-- JSON_ARRAYAGG: JSON_ARRAYAGG se usa para agregar valores en un array JSON. Esta funciï¿½n toma valores individuales y los agrupa en un array JSON.
+-- JSON_MERGEPATCH: Esta funciï¿½n se utiliza para fusionar datos JSON. Puedes proporcionar un documento JSON y un parche JSON, y la funciï¿½n aplicarï¿½ los cambios del parche al documento.
 
 drop table product;
 create table product(
@@ -1172,7 +1173,7 @@ create table product(
     datos  CLOB
 );
 
-insert into product (nombre, datos) values ('PC','{"pais": "Ecuador","ciudad": "Quito","población": "130.000","direccion":{ "calle": "Av ddfedsf",  "edificio": 12,   "piso": 121,},"telefonos": ["3394793473", "892923479237"]}' 
+insert into product (nombre, datos) values ('PC','{"pais": "Ecuador","ciudad": "Quito","poblaciï¿½n": "130.000","direccion":{ "calle": "Av ddfedsf",  "edificio": 12,   "piso": 121,},"telefonos": ["3394793473", "892923479237"]}' 
 );
 
 select * from product;
